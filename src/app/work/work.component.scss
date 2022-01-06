@@ -1,0 +1,131 @@
+.mat-toolbar
+{
+    position: fixed;
+    z-index: 1000;
+    height: 10vmin;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.button-row {
+    display: table-cell;
+}
+
+.button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+    font-weight: bolder;
+    font-size: 3vmin;
+    color: #e9e5e5;
+}
+
+.work-desc-section
+{
+    height: 120vh;
+    min-height: 120vh;
+    background-image: url('../../assets/Images/work-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+    .back-container
+    {
+        height: 20vmin;
+        padding-top: 15vmin;
+    }
+
+    .back-btn
+    {
+        // position: relative;
+        // top: 0;
+        font-size: 3vmin;
+
+        .mat-icon
+        {
+            font-size: 3vmin;
+            margin-right: 2vmin;
+            display: inherit;
+            vertical-align: middle;
+        }
+    }
+
+    .row
+    {
+        margin-left: 13vmin;
+        margin-right: 13vmin;
+    }
+
+    .title 
+    {
+        height: 25vmin;
+        h1
+        {
+            font-size: 6vmin;
+            font-weight: bolder;
+            margin-bottom: 2vmin;
+        }
+
+        p
+        {
+            font-size: 3vmin;
+            line-height: 3.5vmin;
+        }
+    }
+
+    .work-col
+    {
+        margin-bottom: 3vmin;
+    }
+
+    .screenshot
+    {
+        width: 55vw;
+        height: 20vh;
+        border-radius: 5px;
+        transform: rotate3d(0,0,0);
+        transition: transform 0.2s ease-out;
+    }
+
+    .screenshot:hover 
+    {
+        transform: rotate3d(0, 0, 1, 8deg);
+        transition: transform 0.2s ease-in;
+    }
+}
+
+@media screen and (min-width: 993px)
+{
+    .work-desc-section .screenshot
+    {
+        width: 25vw; 
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .work-desc-section .screenshot
+    {
+        width: 35vw; 
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .work-desc-section .screenshot
+    {
+        width: 90vw; 
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    .work-desc-section .screenshot
+    {
+        width: 90vw;
+        height: 45vh;
+    }
+}

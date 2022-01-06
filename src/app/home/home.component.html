@@ -1,0 +1,242 @@
+<div>
+    <mat-toolbar color="primary">
+        <span class="spacer"></span>
+        <section>
+            <div class="button-row">
+                <button mat-button (click)="navigateToHome()">Home</button>
+                <button mat-button (click)="navigateToAbout()">About</button>
+                <button mat-button (click)="navigateToExperience()">Experience</button>
+                <button mat-button (click)="navigateToWork()">Works</button>
+            </div>
+        </section>
+    </mat-toolbar>
+</div>
+
+<section class="home-section" id="home">
+    <div style="height: 70vh;">
+        <img src="assets/Images/avatar-2.svg" class="profile-image"/>
+        <h1 class="name">Lau Yuen Zhen</h1>
+        <span class="desc">I'm a
+            <span class="text-rotating morphext">
+              <span *ngIf="bounce === 1"><span @bounce>Front-End developer</span></span>
+              <span *ngIf="bounce === 2"><span @bounce>Mobile developer</span></span>
+              <span *ngIf="bounce === 3"><span @bounce>Game lover</span></span>
+            </span>
+        </span>
+    </div>
+
+    <div>
+        <span class="scroll-btn">
+            <a (click)="navigateToAbout()">
+              <span class="mouse">
+                <span></span>
+              </span>
+            </a>
+            <p style="font-weight: bolder;">Scroll down</p>    
+        </span>
+    </div>
+</section>
+
+<mat-divider></mat-divider>
+
+<section class="about-section" id="about">
+    <mat-grid-list cols="4" rowHeight="20vh" class="about-grid">
+        <mat-grid-tile class="title" [colspan]="4" [rowspan]="1">
+            <h1>About Me</h1>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="2">
+            <img src="assets/Images/avatar-2.svg" class="profile-image"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="3" [rowspan]="2">
+            <p class="about">I am a graduate from Tunku Abdul Rahman University College, currently working as a frontend mobile developer. 
+                I have experience in developing game using Unity and C#, and also have experience in developing frontend mobile using Ionic and Angular framework. 
+                I am interested in front-end development and would like to gain experience and knowledge from this field.</p>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="4" rowHeight="8vh" class="skill-grid">
+        <mat-grid-tile [colspan]="1" [rowspan]="3">
+            <img src="assets/Images/unity.png" class="skill-image"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="3">
+            <img src="assets/Images/angular.png" class="skill-image"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="3">
+            <img src="assets/Images/ionic.png" class="skill-image"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="3">
+            <img src="assets/Images/typescript.png" class="skill-image"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="4">
+            <img src="assets/Images/csharp.png" class="skill-image"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="4">
+            <img src="assets/Images/html.png" class="skill-image"/>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="4">
+            <img src="assets/Images/css.png" class="skill-image"/>
+        </mat-grid-tile>
+    </mat-grid-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section class="experience-section" id="experience">
+    <mat-grid-list cols="4" rowHeight="20vh" class="experience-grid">
+        <mat-grid-tile class="title" [colspan]="4" [rowspan]="1">
+            <h1>Experience</h1>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="4" rowHeight="40vh" class="timeline-grid">
+        <mat-grid-tile [colspan]="4" [rowspan]="2">
+            <mgl-timeline class="timeline-container">
+                <mgl-timeline-entry>
+                    <mgl-timeline-entry-header>Diploma In Interactive Software</mgl-timeline-entry-header>
+                    <mgl-timeline-entry-content>
+                        <ul>
+                            <li>Game Design and Technology</li>
+                            <li>C++ Object Oriented Programming</li>
+                            <li>2D Game development with DirectX9</li>
+                        </ul> 
+                    </mgl-timeline-entry-content>
+                    <mgl-timeline-entry-side>
+                        <span>                        
+                            <mat-icon>school</mat-icon>
+                            2016 - 2018
+                        </span>
+                    </mgl-timeline-entry-side>
+                    <mgl-timeline-entry-dot [size]="40" style="background-color: #af5656;"></mgl-timeline-entry-dot>
+                </mgl-timeline-entry>
+
+                <mgl-timeline-entry>
+                    <mgl-timeline-entry-header>Degree In Interactive Software</mgl-timeline-entry-header>
+                    <mgl-timeline-entry-content>
+                        <ul>
+                            <li>Graduated with CGPA 3.58</li>
+                            <li>Unity3D game development with C#</li>
+                            <li>3D game development final year project</li>
+                        </ul> 
+                    </mgl-timeline-entry-content>
+                    <mgl-timeline-entry-side>
+                        <span>                        
+                            <mat-icon>school</mat-icon>
+                            2018 - 2020
+                        </span>
+                    </mgl-timeline-entry-side>
+                    <mgl-timeline-entry-dot [size]="40" style="background-color: #af5656;"></mgl-timeline-entry-dot>
+                </mgl-timeline-entry>
+
+                <mgl-timeline-entry>
+                    <mgl-timeline-entry-header>Intern Game Developer</mgl-timeline-entry-header>
+                    <mgl-timeline-entry-content>
+                        <ul>
+                            <li>Asist in developing frontend game prototypes</li>
+                            <li>Test and debug existing client project</li>
+                            <li>Develop game prototypes with Unity3D</li>
+                        </ul> 
+                    </mgl-timeline-entry-content>
+                    <mgl-timeline-entry-side>
+                        <span>                        
+                            <mat-icon>work</mat-icon>
+                            2020 - 2020
+                        </span>
+                    </mgl-timeline-entry-side>
+                    <mgl-timeline-entry-dot [size]="40" style="background-color: #af5656;"></mgl-timeline-entry-dot>
+                </mgl-timeline-entry>
+
+                <mgl-timeline-entry>
+                    <mgl-timeline-entry-header>Frontend Mobile Developer</mgl-timeline-entry-header>
+                    <mgl-timeline-entry-content>
+                        <ul>
+                            <li>Develop frontend mobile apps with Ionic and AngularJS</li>
+                            <li>Create UI based on design using HTML and CSS</li>
+                            <li>Implement code logic to the mobile apps</li>
+                            <li>Integrate with back-end API in mobile apps</li>
+                        </ul> 
+                    </mgl-timeline-entry-content>
+                    <mgl-timeline-entry-side>
+                        <span>                        
+                            <mat-icon>work</mat-icon>
+                            2020 - Current
+                        </span>
+                    </mgl-timeline-entry-side>
+                    <mgl-timeline-entry-dot [size]="40" style="background-color: #af5656;"></mgl-timeline-entry-dot>
+                </mgl-timeline-entry>
+            </mgl-timeline>
+        </mat-grid-tile>
+    </mat-grid-list>
+</section>
+
+<mat-divider></mat-divider>
+
+<section class="work-section" id="work">
+    <mat-grid-list cols="4" rowHeight="20vh" class="work-grid">
+        <mat-grid-tile class="title" [colspan]="4" [rowspan]="1">
+            <div>
+                <h1>Works</h1>
+                <h2>Here are some few projects I have worked on previously.</h2>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-4 col-md-6 col-sm-12 work-col d-flex justify-content-center">
+            <mat-card class="work-card" (click)="navigateToWorkShowCase('EPOS')">
+                <img mat-card-image src="assets/Images/Epos.jpg">
+                <mat-card-title class="title">E-Pos System</mat-card-title>
+                <mat-card-content>
+                    <p>
+                        Features point of sale system built with Ionic and AngularJS
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button class="learn-more-btn" (click)="navigateToWorkShowCase('EPOS')">Learn more</button>
+                  </mat-card-actions>
+              </mat-card>
+          </div>
+
+          <div class="col-12 col-lg-4 col-md-6 col-sm-12 work-col d-flex justify-content-center">
+            <mat-card class="work-card" (click)="navigateToWorkShowCase('DNT')">
+                <img mat-card-image src="assets/Images/d&t.png">
+                <mat-card-title class="title">Dungeon and Tower</mat-card-title>
+                <mat-card-content>
+                    <p>
+                        Features soul like gameplay, RPG element and boss fight built with Unity3D 
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button class="learn-more-btn" (click)="navigateToWorkShowCase('DNT')">Learn more</button>
+                  </mat-card-actions>
+              </mat-card>
+          </div>
+
+          <div class="col-12 col-lg-4 col-md-6 col-sm-12 work-col d-flex justify-content-center">
+            <mat-card class="work-card" (click)="navigateToWorkShowCase('Labyrinth')">
+                <img mat-card-image src="assets/Images/2dmaze.png">
+                <mat-card-title class="title">Labyrinth</mat-card-title>
+                <mat-card-content>
+                    <p>
+                        Features 2D maze game with mechanics involve in-game sound mechanic built with DirectX9
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button class="learn-more-btn" (click)="navigateToWorkShowCase('Labyrinth')">Learn more</button>
+                  </mat-card-actions>
+              </mat-card>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+

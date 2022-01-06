@@ -1,0 +1,82 @@
+<div>
+    <mat-toolbar color="primary">
+        <span class="spacer"></span>
+        <section>
+            <div class="button-row">
+                <button mat-button (click)="navigateToHome()">Home</button>
+                <button mat-button (click)="navigateToAbout()">About</button>
+                <button mat-button (click)="navigateToExperience()">Experience</button>
+                <button mat-button (click)="navigateToWork()">Works</button>
+            </div>
+        </section>
+    </mat-toolbar>
+</div>
+
+<section class="work-desc-section">
+    <div class="back-container">
+        <button mat-button class="back-btn" (click)="navigateBackToWorkList()">
+            <mat-icon>arrow_back</mat-icon>
+            Back to work listing
+        </button>
+    </div>
+
+    <div class="container-fluid" *ngIf="workTitle == 'EPOS'">
+        <div class="row title">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <div style="width: 75%;">
+                    <h1 style="text-align: center;">E-Pos System</h1>
+                    <p style="text-align: center;">I developed E-Pos System frontend mobile apps using Ionic and AngularJS. 
+                        I mainly develop UI based on given design and implement code logic, price and tax calculation into the mobile apps. 
+                        Besides, I integrated with backend-API into my mobile apps to fetch data from server side, and integrated with hardware printer to print report and receipt slips. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center work-col" *ngFor="let item of eposItems; index as i">
+                <img [lightbox]="i" [src]="item.data.thumb" class="screenshot">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" *ngIf="workTitle == 'DNT'">
+        <div class="row title">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <div style="width: 75%;">
+                    <h1 style="text-align: center;">Dungeon and Tower</h1>
+                    <p style="text-align: center;">
+                        This is a project that I developed during my final year of Degree using Unity3D and C#. It offer soul like gameplay with
+                        RPG element, boss fight genre to the player. The game consist of several stages for player to playthrough. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center work-col" *ngFor="let item of dntItems; index as i">
+                <img [lightbox]="i" [src]="item.data.thumb" class="screenshot">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" *ngIf="workTitle == 'Labyrinth'">
+        <div class="row title">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <div style="width: 75%;">
+                    <h1 style="text-align: center;">Labyrinth</h1>
+                    <p style="text-align: center;">
+                        This is a 2D game development project that I developed during my final year of Diploma using DirectX9 and C++. This is a 2D turn-based game, which involves
+                        in-game sound mechanic which allowed player to determine the position of the enemy. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center work-col" *ngFor="let item of labyrinthItems; index as i">
+                <img [lightbox]="i" [src]="item.data.thumb" class="screenshot">
+            </div>
+        </div>
+    </div>
+</section>
